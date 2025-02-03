@@ -17,6 +17,11 @@ html{
     /* --tertiary-color:#282828; */
     /* --tertiary-color:rgb(36, 35, 35); */
 }
+.light-mode{
+    --primary-color:black;
+    --secondary-color:white;
+    --tertiary-color:rgb(241, 239, 236);
+}
 .dark-mode{
     --primary-color:white;
     --secondary-color:black;

@@ -1,4 +1,6 @@
 
+
+
 function execute() {
     let myDate = new Date();
     let change = myDate.toLocaleTimeString();
@@ -13,6 +15,27 @@ hamburger.classList.toggle("active");
 menu.classList.toggle("active");
 })
 setInterval(execute,0);
+// theme control
+let modeTrigger = localStorage.getItem("mode");
+
+if(modeTrigger == null){
+    //on Users first entry set mode to light mode
+    localStorage.setItem("mode","light-mode");
+} else if(modeTrigger == "light-mode"){
+    localStorage.setItem("mode","light-mode");
+    document.body.classList.toggle("light-mode");
+} else {
+    localStorage.setItem("mode","dark-mode");
+    document.body.classList.toggle("dark-mode");
+    
+}
+
+
+
+
+
+
+//
 // let firstsection = document.getElementsByClassName("firstsection")
 // firstsection.style(backgroundcolor = 'red')
 
@@ -65,16 +88,26 @@ setInterval(execute,0);
 //     document.body.classList.toggle("dark-mode");
 // }
 function theme() {
+    // modeTrigger = localStorage.getItem("mode");
     const theme = document.getElementsByClassName("fa-lightbulb");
-    console.log('pressed')
-    // if(document.getElementById("theme").innerHTML == "Dark Mode"){
-    //     document.getElementById("theme").innerHTML ="Light Mode"
 
-    // } else{
-    //     // document.getElementsByClassName('top-buttons').innerHTML = "Light Mode";
-    //     document.getElementById("theme").innerHTML = "Dark Mode";
-    // } 
-    document.body.classList.toggle("dark-mode");
+    if(modeTrigger == "light-mode"){
+        localStorage.setItem("mode","dark-mode");
+        modeTrigger = localStorage.getItem("mode");
+        //to toggle out the old theme
+        document.body.classList.toggle("light-mode");
+        //to toggle int the new theme
+        document.body.classList.toggle("dark-mode");
+
+    } else {
+        localStorage.setItem("mode","light-mode");
+        modeTrigger = localStorage.getItem("mode");
+        //to toggle out the old theme
+        document.body.classList.toggle("dark-mode");
+        //to toggle int the new theme
+        document.body.classList.toggle("light-mode");
+    }   
+
 }
 
 
