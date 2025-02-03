@@ -28,10 +28,18 @@ header .wrapper{
     align-items: center;
     justify-content: center;
 }
+header .wrapper .image{
+    display: flex;
+    align-items: center;
+}
 #logo{
     width: 70px;
     height: 60px;
     border-radius: 50px;
+}
+.primary-nav{
+    margin-left: 5%;
+    margin-right: 10%;
 }
 .primary-nav a{
     text-decoration: none;
@@ -42,7 +50,6 @@ header .wrapper{
 }
 #timeAndPlace{
     display: block;
-    margin-left: 10%;
     margin-right: 5%;
 }
 #location{
@@ -55,7 +62,7 @@ header .wrapper{
     color: var(--primary-color);
     
 }
-.slots{
+/* .slots{
     display: flex;
     align-items: center;
 }
@@ -77,6 +84,17 @@ header .wrapper{
     padding: 10px 15px 10px 15px;
     border: 0;
     border-radius: 5px;
+} */
+ .slots{
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+ }
+ .slots i{
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-top: 0;
+
 }
 #theme{
     color:var(--primary-color);
@@ -164,25 +182,16 @@ button:hover{
    .primary-nav a{
     font-size: 16px;
    }
-   .slots{
+   /* .slots{
    margin-left: 20px;
-   }
+   } */
     .primary-nav{
     margin-left: 10%;
+    margin-right: 10%;
    }
    #timeAndPlace{
     display: none;
    } 
-}
-@media screen and (max-width:1110px) {
-    .primary-nav{
-     margin-left: 4%;
-    }   
-}
-@media screen and (max-width:1000px) {
-     .primary-nav{
-     margin-left: 0;
-    }   
 }
 @media screen and (max-width:940px) {
     #timeAndPlace{
@@ -198,14 +207,9 @@ button:hover{
         display: flex;
     } 
     .slots{
-        margin-right: 10%;
-        margin-left: 10%;
+        margin-right: 15%;
+        margin-left: 15%;
     }
-}
-@media screen and (max-width:785px) {
-    .primary-nav{
-     margin-left: 0;
-    } 
 }
 @media screen and (max-width:785px) {
     header .wrapper{
@@ -220,13 +224,10 @@ button:hover{
         display: flex;
     }
 }
-@media screen and (max-width:420px) {
+@media screen and (max-width:764) {
     .slots{
-        position: absolute;
-        top: 14%;
-        left: 25%;
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: 10%;
+        margin-left: 10%;
     }
 }
 /*-----------------firstsection--------------*/

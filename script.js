@@ -52,16 +52,29 @@ setInterval(execute,0);
    
 // }
 
-function theme() {
-    const theme = document.getElementById("theme");
-    console.log('pressed')
-    if(document.getElementById("theme").innerHTML == "Dark Mode"){
-        document.getElementById("theme").innerHTML ="Light Mode"
+// function theme() {
+//     const theme = document.getElementById("theme");
+//     console.log('pressed')
+//     if(document.getElementById("theme").innerHTML == "Dark Mode"){
+//         document.getElementById("theme").innerHTML ="Light Mode"
 
-    } else{
-        // document.getElementsByClassName('top-buttons').innerHTML = "Light Mode";
-        document.getElementById("theme").innerHTML = "Dark Mode";
-    } 
+//     } else{
+//         // document.getElementsByClassName('top-buttons').innerHTML = "Light Mode";
+//         document.getElementById("theme").innerHTML = "Dark Mode";
+//     } 
+//     document.body.classList.toggle("dark-mode");
+// }
+function theme() {
+    const theme = document.getElementsByClassName("fa-lightbulb");
+    console.log('pressed')
+    // if(document.getElementById("theme").innerHTML == "Dark Mode"){
+    //     document.getElementById("theme").innerHTML ="Light Mode"
+
+    // } else{
+    //     // document.getElementsByClassName('top-buttons').innerHTML = "Light Mode";
+    //     document.getElementById("theme").innerHTML = "Dark Mode";
+    // } 
     document.body.classList.toggle("dark-mode");
 }
+
 
